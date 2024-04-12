@@ -69,7 +69,7 @@ docker run -v '/$(pwd):/data' --name debian -it debian
 
 1. Создайте отдельную директорию(например /tmp/netology/docker/task5) и 2 файла внутри него.
 
-[compose.yml](compose.yml)
+[compose.yml](compose.yaml)
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
 3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
