@@ -71,28 +71,19 @@ docker run -v '/$(pwd):/data' --name debian -it debian
 
 [compose.yml](compose.yaml)
 [docker-compose.yml](docker-compose.yaml)
+![DZ1-5-1](https://github.com/martishinid/DZ1/assets/121010186/8cae6bd9-78d2-4152-bc8f-2a4b7137564a)
 
-3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
-4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
-5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
+3. 
+![DZ1-5-2](https://github.com/martishinid/DZ1/assets/121010186/502ec34a-2696-471c-a429-bef262d2e000)
 
-```
-version: '3'
 
-services:
-  nginx:
-    image: 127.0.0.1:5000/custom-nginx
-    ports:
-      - "9090:80"
-```
-6. Перейдите на страницу "http://127.0.0.1:9000/#!/2/docker/containers", выберите контейнер с nginx и нажмите на кнопку "inspect". В представлении <> Tree разверните поле "Config" и сделайте скриншот от поля "AppArmorProfile" до "Driver".
 
-7. Удалите любой из манифестов компоуза(например compose.yaml).  Выполните команду "docker compose up -d". Прочитайте warning, объясните суть предупреждения и выполните предложенное действие. Погасите compose-проект ОДНОЙ(обязательно!!) командой.
+![DZ1-5-3](https://github.com/martishinid/DZ1/assets/121010186/fb5ece6a-e2e1-4d5e-ac76-282f153c36cf)
 
-В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
+7. 
 
----
+![DZ1-5-4](https://github.com/martishinid/DZ1/assets/121010186/40f41c6a-bb76-4db4-84ff-a560f0efdf5a)
+![DZ1-5-5](https://github.com/martishinid/DZ1/assets/121010186/a454c336-abff-4697-ab8c-5003b260dd47)
 
-### Правила приема
 
-Домашнее задание выполните в файле readme.md в GitHub-репозитории. В личном кабинете отправьте на проверку ссылку на .md-файл в вашем репозитории.
+
