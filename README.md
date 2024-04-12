@@ -68,9 +68,10 @@ docker run -v '/$(pwd):/data' --name debian -it debian
 ## Задача 5
 
 1. Создайте отдельную директорию(например /tmp/netology/docker/task5) и 2 файла внутри него.
-"compose.yaml" с содержимым:
-```
-version: "3"
+
+[Uploading compose.yml…]()version: "3"
+include:
+ - docker-compose.yaml
 services:
   portainer:
     image: portainer/portainer-ce:latest
@@ -79,9 +80,6 @@ services:
       - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-```
-"docker-compose.yaml" с содержимым:
-```
 version: "3"
 services:
   registry:
@@ -89,9 +87,6 @@ services:
     network_mode: host
     ports:
     - "5000:5000"
-```
-
-И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? (подсказка: https://docs.docker.com/compose/compose-application-model/#the-compose-file )
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
